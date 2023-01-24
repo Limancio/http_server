@@ -1,0 +1,69 @@
+<script>
+	function mostrar_login() {
+		let login_panel = document.querySelector("#login_panel");
+		let formulario_panel = document.querySelector("#formulario_panel");
+		
+		if(login_panel.classList.contains("panel__activo")) {
+			login_panel.classList.remove("panel__activo");
+			
+			//login_panel.classList.toggle("panel__flotante");
+			login_panel.classList.toggle("panel__desactivado");
+			
+			formulario_panel.classList.remove("panel__formulario-activo");
+			formulario_panel.classList.toggle("panel__formulario-desactivado");
+		} else {
+			login_panel.classList.remove("panel__desactivado");
+			
+			//login_panel.classList.toggle("panel__flotante");
+			login_panel.classList.toggle("panel__activo");
+			
+			formulario_panel.classList.remove("panel__formulario-desactivado");
+			formulario_panel.classList.toggle("panel__formulario-activo");
+		}			
+	}
+
+	function mostrar_registro() {
+		let login_panel = document.querySelector("#register_panel");
+		let formulario_panel = document.querySelector("#formulario_register_panel");
+		
+		if(login_panel.classList.contains("panel__activo")) {
+			login_panel.classList.remove("panel__activo");
+			
+			//login_panel.classList.toggle("panel__flotante");
+			login_panel.classList.toggle("panel__desactivado");
+			
+			formulario_panel.classList.remove("panel__formulario-activo");
+			formulario_panel.classList.toggle("panel__formulario-desactivado");
+		} else {
+			login_panel.classList.remove("panel__desactivado");
+			
+			//login_panel.classList.toggle("panel__flotante");
+			login_panel.classList.toggle("panel__activo");
+			
+			formulario_panel.classList.remove("panel__formulario-desactivado");
+			formulario_panel.classList.toggle("panel__formulario-activo");
+		}			
+	}
+</script>
+
+<div class="panel__flotante panel__desactivado" id="login_panel">
+	<form action="{URL_PATH()}/index/login/" enctype="multipart/form-data" method="post" id="formulario_panel" class="panel__formulario-desactivado>
+		<label for="usuario" class="etiqueta__formulario">Nombre de Usuario</label>
+		<input id="usuario" name="user" type="text" placeholder="Usuario"></input>
+		<label for="contrasena" class="etiqueta__formulario">Contraseña</label>
+		<input id="contrasena" name="password" type="password"></input>
+		
+		<input type="submit" value="Login"></input>
+	</form>
+</div>
+
+<div class="panel__flotante panel__desactivado" id="register_panel">
+	<form action="{URL_PATH()}/index/registrar/" enctype="multipart/form-data" method="post" id="formulario_register_panel" class="panel__formulario-desactivado>
+		<label for="usuario" class="etiqueta__formulario">Nuevo nombre de Usuario</label>
+		<input id="usuario" name="user" type="text" placeholder="Usuario"></input>
+		<label for="contrasena" class="etiqueta__formulario">Contraseña</label>
+		<input id="contrasena" name="password" type="password"></input>
+		
+		<input type="submit" value="Login"></input>
+	</form>
+</div>
